@@ -1,0 +1,18 @@
+<h1>Adicionar Novo Papel</h1>
+
+
+<%= form_with( model: [@actor, @role]) do |f| %>
+
+  <div>
+    <%= f.label :role, "Papel" %>
+    <%= f.text_field :role %>
+  </div>
+
+  <div>
+    <%= f.label :movie, "Filme" %>
+    <%= f.collection_select :movie, @movies, :id, :title %>
+  </div>
+
+  <%= f.submit "Adicionar" %>
+
+<% end %>

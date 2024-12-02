@@ -1,0 +1,16 @@
+<h1>Ator: <%= @actor.name %></h1>
+
+<h2>Filmes:</h2>
+
+<% @actor.roles.each do |role| %>
+
+<div>
+  <%= role.role %>
+</div>
+<div>
+  <%= role.movie.title %>
+</div>
+
+<% end %>
+
+<%= link_to "Adicionar Papel", new_actor_role_path(@actor) %>

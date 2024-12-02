@@ -8,6 +8,10 @@ class ActorsController < ApplicationController
     @actor = Actor.new
   end
 
+  def show
+    @actor = Actor.find(params[:id])
+  end
+
   def create
     actor_params = params
     .require(:actor)
