@@ -3,7 +3,11 @@ require 'rails_helper'
 describe 'Usuário cadastra um ator ou atriz' do
   it 'e com sucesso' do
     # Arrange
-    user = FactoryBot.create(:user, email: 'joao@email.com')
+    user = User.create!(
+      name: "João",
+      email: 'joao@email.com',
+      password: '123456789'
+    )
     login_as user
 
     visit root_path
