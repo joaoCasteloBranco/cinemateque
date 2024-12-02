@@ -23,6 +23,6 @@ describe 'Usuário cadastra um ator ou atriz' do
     # Assert
     expect(page).to have_content "Artista Adiciona com Sucesso"
     expect(page).to have_content "Brasileira"
-    expect(page).to have_content "30/09/1960"
+    expect(page).to have_content "1960-09-30"
   end
 end

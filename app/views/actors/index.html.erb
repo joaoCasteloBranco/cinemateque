@@ -1,3 +1,11 @@
 <h1>Artitas Cadastrados</h1>
 
+<% @actors.each do |actor| %>
+  <div>
+    <%= actor.name %>
+    <%= actor.nacionality %>
+    <%= actor.birth_date %>
+  </div>
+<% end %>
+
 <%= link_to 'Adicionar Ator ou Atriz', new_actor_path %>
